@@ -1,0 +1,33 @@
+.filter {
+  margin-bottom: 3rem;
+
+  .panel-group {
+    margin-bottom: 0;
+  }
+}
+
+.panel-group .panel + .panel {
+  margin-top: 1rem;
+}
+
+
+.map {
+  * {
+    transition: all 0;
+  }
+  height: 20rem;
+  margin-bottom: 3rem;
+}
+
+
+.map .leaflet-label {
+  background-color: rgba(0,0,0,0.8);
+  border-color: rgba(0,0,0,0.8);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .map {
+    display: none;
+  }
+}

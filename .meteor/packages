@@ -1,0 +1,35 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+# I have no idea why this is necessary.
+standard-app-packages
+less
+autopublish
+mquandalle:harmony@1.2.1
+iron:router@0.9.1
+raix:handlebar-helpers@0.1.1
+mrt:leaflet@0.3.8
+mrt:iron-router-progress@0.4.1
+mizzao:bootstrap-3
+
+# Base
+cs-base
+cs-layout
+cs-router
+cs-database
+
+# Dashboard
+cs-dashboard
+cs-check-in
+cs-feed
+cs-filter
+aldeed:autoform
+aldeed:collection2
+aldeed:simple-schema
+cfs:standard-packages
+cfs:filesystem
+cfs:gridfs
+autopublish
+yogiben:autoform-file

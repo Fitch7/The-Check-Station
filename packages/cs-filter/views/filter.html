@@ -1,0 +1,75 @@
+<template name="filter">
+  <div class="filter">
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseRegion">
+              Region 
+            </a>
+          </h4>
+        </div>
+        <div id="collapseRegion" class="panel-collapse collapse in">
+          <div class="panel-body">
+            {{> map}}
+            <div class="regions">
+              <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" class="form-control" disabled>
+                  <option value="virginia">Virginia</option>
+                </select> 
+                <p class="help-block">Other states available after launch.</p>
+              </div>
+              <div class="form-group">
+                <label for="county">County</label>
+                <select id="county" class="form-control">
+                  <option value="all">All</option>
+                  {{#each counties}}
+                    {{#if this.isSelected}}
+                      <option value="{{this.properties.NAME}}" selected="selected">{{this.properties.NAME}}</option>
+                      {{else}}
+                      <option value="{{this.properties.NAME}}">{{this.properties.NAME}}</option>
+                    {{/if}}
+                  {{/each}}
+                </select> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+      {{#each radioFilters}}
+        <div class="panel panel-default {{class}}">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{title}}">
+                {{title}}
+              </a>
+            </h4>
+          </div>
+          <div id="collapse{{title}}" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="radio"> 
+                <label>
+                  <input type="radio" name="{{class}}Radios" value="all" checked>
+                  All
+                </label>
+              </div>
+              {{#each options}}
+                <div class="radio"> 
+                  <label>
+                    <input type="radio" name="{{../class}}Radios" value="{{this}}">
+                    {{this}}
+                  </label>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div> 
+  </div>
+</template>
+
+<template name="map">
+  <div id="map" class="map"></div>
+</template>

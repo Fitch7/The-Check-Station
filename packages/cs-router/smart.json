@@ -1,0 +1,6 @@
+{
+  "packages": {
+    "iron:router": {},
+    "mrt:iron-router-progress": {}
+  }
+}

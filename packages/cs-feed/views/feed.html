@@ -1,0 +1,27 @@
+<template name="feed">
+  <div class="feed">
+    {{#each items}}
+      {{> item}}
+    {{/each}}
+  </div>
+</template>
+
+
+<template name="item">
+  <div class="item">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p class="caption top clearfix">
+          <strong>{{name}}</strong>
+          <span class="pull-right">{{date}}</span>
+        </p>
+        <img class="photo" src="{{fileUrl}}" />
+        {{#if caption}}
+        <p class="caption bottom"><strong>{{game}}</strong> in <strong>{{county}} County</strong> – {{caption}}</p>
+        {{else}}
+        <p class="caption bottom"><strong>{{game}}</strong> in <strong>{{county}} County</strong></p>
+        {{/if}}
+    </div>
+  </div>
+</div>
+</template>

@@ -1,0 +1,20 @@
+<template name="dashboard">
+  <div class="col-sm-6">
+    <a class="check-in btn btn-lg btn-primary btn-block" data-toggle="modal" data-target="#check-in-modal">Check-in</a>
+    {{> filter}}
+  </div>
+  <div class="col-sm-6">
+    {{> feed}}
+  </div>
+  {{> modal}}
+</template>
+
+<template name="modal">
+  <div class="modal fade" id="check-in-modal" tabindex="-1" role="dialog" aria-labelledby="check-in-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      {{> checkIn}}
+      </div>
+    </div>
+  </div>
+</template>
