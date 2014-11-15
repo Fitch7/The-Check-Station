@@ -10,6 +10,8 @@
 *.DS_Store
 [Tt]humbs.db 
 _ReSharper.*
+._*
+*.DS_Store
 *.resharper
 Ankh.NoLoad
 *.mp3
